@@ -1,8 +1,9 @@
-def count_character(text, target):
-    count = 0
+def multiplication_table(number, limit):
+    # TODO: use a for loop to build a list of number * 1 through number * limit
+    product = []
 
-    for char in text:
-        if char in target:
-            count += 1
-    return count
-print(count_character("BANANA","a"))
+    for count in range(1,limit+1):
+        product.append(number*count)
+    return product
+
+print(multiplication_table(1,4))
