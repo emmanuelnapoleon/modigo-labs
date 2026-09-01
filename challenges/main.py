@@ -1,11 +1,8 @@
-def count_vowels(text):
-    vowels = "aeiou"
-    count = 0
-    # TODO: loop through `text`, check each character (case-insensitively)
-    # against `vowels`, and increment `count` when it matches
-    for vowel in text:
-        if vowel.lower() in vowels:
-            count = count + 1 
-    return count
-
-print(count_vowels('Education'))
+def find_max(numbers):
+    largest = numbers[0]
+    for num in numbers:
+        
+        if num > largest:
+            largest = num
+    return largest
+print(find_max([-12, -1, -500,54, 60]))
