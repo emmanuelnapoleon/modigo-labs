@@ -1,8 +1,10 @@
-def find_max(numbers):
-    largest = numbers[0]
-    for num in numbers:
-        
-        if num > largest:
-            largest = num
-    return largest
-print(find_max([-12, -1, -500,54, 60]))
+def sum_even_numbers(numbers):
+    # TODO: return the sum of all even numbers in `numbers`
+    addition = 0
+
+    for even_num in numbers:
+        if even_num % 2 == 0:
+            addition = addition + even_num
+
+    return addition
+print(sum_even_numbers([2,4,6,8]))
