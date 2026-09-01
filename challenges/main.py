@@ -1,9 +1,11 @@
-def multiplication_table(number, limit):
-    # TODO: use a for loop to build a list of number * 1 through number * limit
-    product = []
+def count_vowels(text):
+    vowels = "aeiou"
+    count = 0
+    # TODO: loop through `text`, check each character (case-insensitively)
+    # against `vowels`, and increment `count` when it matches
+    for vowel in text:
+        if vowel.lower() in vowels:
+            count = count + 1 
+    return count
 
-    for count in range(1,limit+1):
-        product.append(number*count)
-    return product
-
-print(multiplication_table(1,4))
+print(count_vowels('Education'))
