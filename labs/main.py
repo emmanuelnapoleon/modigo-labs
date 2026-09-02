@@ -1,16 +1,21 @@
-# No starter code provided — write the full function yourself.
-# Function name: split_bill
-# Parameters: bill_amount, tip_percent, people
-# Must return: each person's share, rounded to 2 decimal places
+def bmi_report(weight_kg, height_m):
+    # TODO: calculate bmi, round it to 1 decimal place, determine the category,
+    # and return "BMI: {bmi}, Category: {category}"
 
-def split_bill(bill_amount, tip_percent,people):
+    bmi =round(( weight_kg/(height_m**2)),1)
+    
+    category = ""
 
-    tip_amount = bill_amount*(tip_percent/100)
-    ground_total = bill_amount + tip_amount
-    person_share = ground_total/people
 
-    return round(person_share,2)
+    if bmi > 30.0:
+        category = "Obese"
+    elif bmi > 25.0:
+        category = "Overweight"
+    elif bmi > 18.5:
+        category = "Normal weight"
+    elif bmi < 18.5:
+        category = "Underweight"
 
-print(split_bill(100,10,2))
-print(split_bill(60,20,3))
-print(split_bill(50,0,1))
+    return f"BMI: {bmi}, Category: {category}"
+
+print(bmi_report(70, 1.75))
